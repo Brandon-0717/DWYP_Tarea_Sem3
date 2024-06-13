@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es"> 
+
+<html>
     <head>
         <title>Elsa´s Place</title>
         <meta charset="UTF-8">
@@ -21,24 +22,29 @@
                 </ul>
             </nav>
         </header>
+        
+         <section class="pedidos">
+        <h2>Realiza tu Pedido</h2>
+        <form class="form-pedidos" action="procesarPedido.html" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-         <section class="productos">
-            <div class="producto">
-                <img src="https://cdn7.kiwilimon.com/recetaimagen/3329/38990.jpg" alt="Producto 1">
-                <h4>Choco Galletas</h4>
-            </div>
-            <div class="producto">
-                <img src="https://arc-anglerfish-arc2-prod-gruponacion.s3.amazonaws.com/public/IVIPYE7XMNBHJAU3FUBS4YXYFY.jpg" alt="Producto 2">
-                <h4>Queque Navideño</h4>
-            </div>
-            <div class="producto">
-                <img src="https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/7f45d6f8807ebc775928651a3398dce9.png" alt="Producto 3">
-                <h4>Tiramisú</h4>
-            </div>
-            <div class="producto">
-                <img src="https://www.goya.com/media/7148/coconut-rompope-new.jpg?quality=80" alt="Producto 4">
-                <h4>Rompope</h4>
-            </div>
-        </section>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="producto">Producto:</label>
+            <select id="producto" name="producto" required>
+                <option value="chocofresas">Chocofresas</option>
+                <option value="tresLeches">Tres Leches</option>
+                <option value="cupcakes">Cupcakes</option>
+            </select>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+            <input type="submit" value="Enviar Pedido">
+        </form>
+    </section>
+        
     </body>
 </html>
